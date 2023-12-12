@@ -147,6 +147,7 @@ void process(Event e){
         routers[e.id].processEvent();
     }
 }
+
 /*
 create_router 1 1
 create_router 1 1
@@ -154,12 +155,58 @@ create_connection 0 1 0
 send_packet 0 1
 */
 
+int cur_packet = 0;
+int cur_time = 0;
+
+void readFile(string path){
+    ifstream read(path);
+    string op;
+    while(read >> op){
+        if(op == "create_router"){
+            int time_per_request, time_per_packet;
+            read >> time_per_request >> time_per_packet;
+            routers[num_routers] = Router(time_per_request, time_per_packet, num_routers);
+            global_queue.push(Event(cur_time, num_routers));
+            cout << "Created router with id " << num_routers << ", time per request " << time_per_request << ", and time per packet " << time_per_packet << endl;
+            num_routers++;
+        } else if(op == "create_connection"){
+            int a, b, c;
+            read >> a >> b >> c;
+            cost[a][b] = cost[b][a] = c;
+            connected[a][b] = connected[b][a] = true;
+            cout << "Created connection between router " << a << " and router " << b << " having a delay of " << c << endl;
+        } else if(op == "delete_connection"){
+            int a, b;
+            read >> a >> b;
+            connected[a][b] = connected[b][a] = false;
+            cout << "Deleted connection between router " << a << " and router " << b << endl;
+        } else if(op == "send_packet"){
+            int src, dest;
+            read >> src >> dest;
+            Packet p = Packet(dest, cur_packet, cur_time);
+            global_queue.push(Event(cur_time, src, -1, p));
+            cout << "Queued packet from router " << src << " to router " << dest << " having id " << cur_packet << endl;
+        } else if(op == "advance"){
+            int time;
+            read >> time;
+            cout << "Advancing system from time " << cur_time << " to time " << cur_time + time << "..." << endl;
+            cur_time += time;
+            while(global_queue.size() && global_queue.top().time <= cur_time){
+                Event e = global_queue.top();
+                global_queue.pop();
+                process(e);
+            }
+        } else {
+            cout << "Invalid operation" << endl;
+            exit(0);
+        }
+    }
+}
+
 int main(int argc, char *argv[]){
     num_routers = 0;
     memset(connected, false, sizeof(connected));
     string op;
-    int cur_packet = 0;
-    int cur_time = 0;
     while(cin >> op){
         if(op == "create_router"){
             int time_per_request, time_per_packet;
@@ -195,8 +242,13 @@ int main(int argc, char *argv[]){
                 global_queue.pop();
                 process(e);
             }
+        } else if(op == "read_file"){
+            string path;
+            cin >> path;
+            readFile(path);
         } else {
             cout << "Invalid operation" << endl;
+            exit(0);
         }
     }
 }
