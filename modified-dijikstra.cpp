@@ -60,6 +60,8 @@ bool connected[MAX_ROUTERS][MAX_ROUTERS]; // does there exist a connection from 
 
 priority_queue<Event> global_queue;
 
+int get_router_cost(int index);
+
 struct Router {
 
     int internal_time;   // router's internal clock
@@ -98,7 +100,7 @@ struct Router {
             pq.pop();
             if(x.first > dist[x.second]) continue;
             for(int i = 0; i < num_routers; i++){
-                if(connected[x.second][i] && dist[i] > x.first + cost[x.second][i]){
+                if(connected[x.second][i] && dist[i] > x.first + cost[x.second][i] + get_router_cost(i)){
                     dist[i] = x.first + cost[x.second][i];
                     par[i] = x.second;
                     pq.push({dist[i], i});
@@ -134,6 +136,10 @@ struct Router {
 };
 
 Router routers[MAX_ROUTERS];
+
+int get_router_cost(int index){
+    return (routers[index].time_per_packet + routers[index].time_per_request)*routers[index].packet_queue.size();
+}
 
 void process(Event e){
     if(e.type == SEND){
