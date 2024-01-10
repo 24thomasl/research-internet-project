@@ -14,12 +14,13 @@
 * - out = output file
 *
 * Ex:
-* ./a 100 1000 1 1000 20 100 out.txt
+* ./a 100 1000 1 1000 20 100 connected.txt
 */
 #include <bits/stdc++.h>
 using namespace std;
 
-const int SEED = 1434;
+//const int SEED = 1434;
+const int SEED = 1437;
 
 mt19937 rng(SEED);
 

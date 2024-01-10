@@ -1,0 +1,200 @@
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_router 5 1000
+create_connection 1 2 1
+create_connection 2 3 1
+create_connection 3 4 1
+create_connection 4 5 1
+create_connection 5 6 1
+create_connection 6 7 1
+create_connection 7 8 1
+create_connection 8 9 1
+create_connection 9 10 1
+create_connection 10 11 1
+create_connection 11 12 1
+create_connection 12 13 1
+create_connection 13 14 1
+create_connection 14 15 1
+create_connection 15 16 1
+create_connection 16 17 1
+create_connection 17 18 1
+create_connection 18 19 1
+create_connection 19 20 1
+create_connection 20 21 1
+create_connection 21 22 1
+create_connection 22 23 1
+create_connection 23 24 1
+create_connection 24 25 1
+create_connection 25 26 1
+create_connection 26 27 1
+create_connection 27 28 1
+create_connection 28 29 1
+create_connection 29 30 1
+create_connection 30 31 1
+create_connection 31 32 1
+create_connection 32 33 1
+create_connection 33 34 1
+create_connection 34 35 1
+create_connection 35 36 1
+create_connection 36 37 1
+create_connection 37 38 1
+create_connection 38 39 1
+create_connection 39 40 1
+create_connection 40 41 1
+create_connection 41 42 1
+create_connection 42 43 1
+create_connection 43 44 1
+create_connection 44 45 1
+create_connection 45 46 1
+create_connection 46 47 1
+create_connection 47 48 1
+create_connection 48 49 1
+create_connection 49 50 1
+create_connection 50 51 1
+create_connection 51 52 1
+create_connection 52 53 1
+create_connection 53 54 1
+create_connection 54 55 1
+create_connection 55 56 1
+create_connection 56 57 1
+create_connection 57 58 1
+create_connection 58 59 1
+create_connection 59 60 1
+create_connection 60 61 1
+create_connection 61 62 1
+create_connection 62 63 1
+create_connection 63 64 1
+create_connection 64 65 1
+create_connection 65 66 1
+create_connection 66 67 1
+create_connection 67 68 1
+create_connection 68 69 1
+create_connection 69 70 1
+create_connection 70 71 1
+create_connection 71 72 1
+create_connection 72 73 1
+create_connection 73 74 1
+create_connection 74 75 1
+create_connection 75 76 1
+create_connection 76 77 1
+create_connection 77 78 1
+create_connection 78 79 1
+create_connection 79 80 1
+create_connection 80 81 1
+create_connection 81 82 1
+create_connection 82 83 1
+create_connection 83 84 1
+create_connection 84 85 1
+create_connection 85 86 1
+create_connection 86 87 1
+create_connection 87 88 1
+create_connection 88 89 1
+create_connection 89 90 1
+create_connection 90 91 1
+create_connection 91 92 1
+create_connection 92 93 1
+create_connection 93 94 1
+create_connection 94 95 1
+create_connection 95 96 1
+create_connection 96 97 1
+create_connection 97 98 1
+create_connection 98 99 1
+create_connection 99 100 40
+create_connection 1 100 40

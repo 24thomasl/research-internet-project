@@ -25,7 +25,6 @@ int main(int argc, char *argv[]){
     int n = stoi(argv[1]);
     int m = stoi(argv[2]);
     for(int i = 0; i < m; i++){
-        o << "send_packet " << random(0, n - 1) << " " << random(0, n - 1) << "\n";
-        o << "advance 100\n";
+        o << "send_packet " << 1 << " " << n - 1 << "\n";
     }
 }

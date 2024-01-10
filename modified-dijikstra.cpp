@@ -60,6 +60,8 @@ bool connected[MAX_ROUTERS][MAX_ROUTERS]; // does there exist a connection from 
 
 priority_queue<Event> global_queue;
 
+vector<int> times;
+
 int get_router_cost(int index);
 
 struct Router {
@@ -120,6 +122,7 @@ struct Router {
             packet_queue.pop();
             if(p.dest_id == id){
                 cout << "Packet " << p.packet_id << " successfully reached router " << id << " in " << internal_time - p.orig_time << " microseconds" << endl;
+                times.push_back(internal_time - p.orig_time);
             } else {
                 pair<int, int> nxt = get_next_id(p);
                 internal_time += nxt.second;
@@ -259,9 +262,16 @@ int main(int argc, char *argv[]){
             string path;
             cin >> path;
             readFile(path);
+        } else if(op == "end"){
+            break;
         } else {
             cout << "Invalid operation" << endl;
             exit(0);
         }
     }
+    sort(times.begin(), times.end());
+    int sum = 0;
+    for(int i : times) sum += i;
+    cout << "Mean: " << sum/times.size() << endl;
+    cout << "Median: " << times[times.size()/2] << endl;
 }
